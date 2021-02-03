@@ -1,0 +1,102 @@
+/* 로그인(signin) CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    padding:5px;
+}
+
+section {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 100px;
+}
+.bigbox {
+    height: 300px;
+    width: 482px;
+    background-color:#F2F2F2;
+    margin: 0 auto;
+}
+
+input {
+    text-align: center;
+    height: 25px;
+    border: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.title {
+    margin:0 auto;
+    width: 100px;
+    top:150px;
+    padding-top: 5px;
+}
+
+.box1  {
+    margin: 0 auto;
+    text-decoration: none;
+    display: inline-block;
+    list-style-type: none;
+    padding:0px 30px 10px 50px;
+    font-weight: bold;
+}
+.input_box {
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 3px auto;
+}
+
+.box2, #signup1 {
+    float: left;
+    margin: 0 auto;
+    font-weight: bold;
+    position: relative;
+    vertical-align: middle;
+    top: 15px;
+    left: 70px;
+}
+
+#signup1 {
+    padding: 0px 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #D8D8D8;
+    cursor: pointer;   
+}
+
+.box3 {
+    display: block;
+    clear: both;
+    position: relative;
+    top: 30px;
+    left: 130px;
+    
+}
+.signin2, .canceal {  
+    float: left;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    vertical-align: bottom;
+    width: 100px;
+    height: 30px;
+    border-width: 2px;
+    cursor: pointer;    
+}
+.signin2 {
+    background-color: lightblue;
+}
+.canceal {
+    background-color: #D8D8D8;
+}

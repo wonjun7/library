@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../static/css/master.css">
+<link rel="stylesheet" href="../../static/css/tmaster.css">
+<script src="/static/js/master.js"></script>
+<title>Master Page - Report</title>
+</head>
+
+<body>
+<ul class="sidenav">
+    <li><a class="active" href="#관리자 페이지">관리자 페이지</a></li>
+    <li><a href="/main">홈</a></li>
+    <li><a href="/master/master">회원</a></li>
+    <li><a href="/master/community">게시글</a></li>
+    <li><a href="/master/books">도서</a></li>
+    <li><a href="/master/report">대출기록</a></li>
+</ul>
+
+<div class="content">
+  <h1 id="title2">대출기록</h1><img src="../../static/image/master/member.jpeg" id="member">
+  <p>회원들의 책 대출기록을 볼수 있는 곳입니다.</p>
+
+    <table id="t01">
+        <tr>
+            <th>책</th>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>대여</th>
+            <th>반납</th>
+        </tr>
+
+    {{ content | safe }}  <!-- db의 자료를 가져옴 -->
+
+    </table>
+
+
+<h3>개인정보 유출을 항상 조심합시다 !!</h3>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+li{
+    list-style: none;
+}
+
+table{
+    width: 100%;
+    border: 1 1px solid #222;
+    border-collapse: collapse;
+    }
+
+thead {
+    background-color: lightgray;
+}
+
+th, td {
+    border: 1px solid rgb(165, 162, 162);
+    padding: 5px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.inline_float {
+    display: inline;
+    float: right;
+    margin-left: 5px;
+}
+.inline-block {
+    display: inline;
+}
+
+.float{
+    float: right;
+}
+
+input[type="text"]{
+    vertical-align: top;
+}
+
+section h1 {
+    text-align: center;
+}

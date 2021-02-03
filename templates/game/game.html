@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/css/game.css">
+{% extends "base.html" %}
+{% block section %}
+<section>
+    <h1>가위바위보 게임</h1>
+    <div>알파고를 이겨라!</div><br><br>
+    <div id="computer"></div>
+    <div>
+        <button id="rock" class="btn">가위</button>
+        <button id="scissor" class="btn">바위</button>
+        <button id="paper" class="btn">보</button>
+    </div>
+    <br>
+    <div id="result"></div>
+    <br>
+    <h3>5승 0패 인증시 경품 증정이...!?</h3>
+    <p>무승부는 승패에 관여하지 않습니다.</p>
+    <button id="init">초기화</button>
+    <script src="/static/js/game.js"></script>
+
+</section>
+{% endblock %}

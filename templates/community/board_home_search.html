@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../../static/css/board_home_css.css">
+{% extends "base.html" %}
+{% block section %}
+
+    <section>
+        <h1>생각 나눔</h1>
+        <br>
+
+        <div>  
+            <p class="inline-block">조회 : {{content1 | safe}} 건</p>
+
+
+            <form class="inline-block float" action="/community/board_home_search" method="GET">
+                <input placeholder="제목으로 검색" onfocus="this.placeholder=''" onblur="this.placeholder='제목으로 검색'" type="text" name="search_text">
+                <input type="submit" value="검색">
+            </form>       
+
+        </div>
+
+        <br>
+        {{content | safe}}
+
+        <br>
+        <div>
+            <input class="inline_float" type="button" style="float: right;" value="글 작성" onclick="location.href='/community/write_doc'">
+            <input class="inline_float" type="button" value="목록으로" onclick="location.href='/community/board_home'">
+        </div>
+    </section>  
+{% endblock %} 

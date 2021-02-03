@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../static/css/master.css">
+<link rel="stylesheet" href="../../static/css/tmaster.css">
+<link rel="stylesheet" href="../../static/css/board_home_css.css">
+<script src="/static/js/master.js"></script>
+<title>Master Page - Community</title>
+</head>
+<body>
+
+<ul class="sidenav">
+  <li><a class="active" href="#관리자 페이지">관리자 페이지</a></li>
+  <li><a href="/main">홈</a></li>
+  <li><a href="/master/master">회원</a></li>
+  <li><a href="/master/community">게시글</a></li>
+  <li><a href="/master/books">도서</a></li>
+  <li><a href="/master/report">대출기록</a></li>
+</ul>
+
+<div class="content">
+  <h1 id="title2">게시글</h1><img src="../../static/image/master/member.jpeg" id="member">
+  <p>회원들의 게시글을 관리하는 곳입니다.</p>
+  
+<form action="/master/community" method="GET" name="check">
+  <input type="text" id="del" name="delete" placeholder="삭제할 게시글 번호 입력..">
+  <input type="button" id="btn" value="삭제하기" style="margin-left:10px" onclick="button_event()">
+</form>
+
+  <section>
+    <h1>생각 나눔</h1>   
+
+    <div>  
+        <p class="inline-block">게시물 : {{content1 | safe}} 건</p>
+    
+        
+        <form class="inline-block float" action="/community/board_home_search" method="GET">
+            <input placeholder="제목으로 검색" onfocus="this.placeholder=''" onblur="this.placeholder='제목으로 검색'" type="text" name="search_text">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+
+    <br>
+    {{content | safe}}
+    <br>
+
+    <input type="button" style="float: right;" value="글 작성" onclick="location.href='/community/write_doc'"> 
+</section>
+
+</body>
+</html>

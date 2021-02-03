@@ -1,0 +1,23 @@
+<!--회원가입수정 화면 -->
+<link rel="stylesheet" href="../static/css/membercss.css?after">
+{% extends "base.html" %}
+{% block section %}
+<div class="bigbox">    
+    <section>
+        <div class="title" style="margin-right:30px;">
+            <h1 class="signup">회원정보 수정</h1>
+        </div>
+    </section>
+    <article>
+        <form action="/member_info" method="post">
+        {{ content | safe }}
+
+<!-- 수정한 후 확인버튼을 click 한 경우 수정된 데이터는 DB로 저장되고, main 화면으로 이동-->
+            <div class="box3">
+                <div><input type="submit" id="confirm" value="확인"  onclick="location.href='/member_info'"></div>
+                <div><input type="button"  id="canceal" value="취소"  onclick="location.href='/main'"></div>
+            </div>
+        </form>
+    </article>
+</div>
+{% endblock %}

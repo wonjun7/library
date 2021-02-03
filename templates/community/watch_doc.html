@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../../static/css/watch_docs_css.css">
+<link rel="stylesheet" href="../static/css/basic.css">
+{% extends "base.html" %}
+{% block section %}
+       <section>
+        
+        <h1>글 보기</h1>
+        <hr>
+        <input class="float-right" type="button" value="목록으로" onclick="location.href='/community/board_home'">
+
+        <br>
+        {{alert|safe}}
+<!--        사용자가 댓글이 달려 있는 자신의 게시글을 수정하려는 경우 경고 메세지 -->
+        {{content|safe}}
+        <br>
+        <p>{{no_com|safe}} {{for_rotation_counting|safe}} 개의 댓글이 있습니다.</p>
+
+        {{ com_content | safe }}
+
+        <form action="/community/write_com" method="POST">
+            <div class="container">
+                <textarea name="comment" placeholder="댓글 작성" onfocus="this.placeholder=''" onblur="this.placeholder='댓글 작성'"></textarea>
+                <input class="float-right" type="submit" value="등록" onclick="">
+            </div>
+        </form>
+        
+    </section>
+{% endblock %}

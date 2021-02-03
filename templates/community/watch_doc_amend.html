@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="../../static/css/watch_docs_css.css">
+<link rel="stylesheet" href="../static/css/basic.css">
+{% extends "base.html" %}
+{% block section %}
+
+    <section>
+
+        <h1>글 수정</h1>
+        <hr>
+        <input class="float-right" type="button" value="목록으로" onclick="location.href='/community/board_home'">
+        <br>
+
+        <!--        <input type="hidden" value="{{author | safe}}">-->
+        <!--        {{author | safe}}-->
+
+        {{content_amend | safe}} 
+
+
+
+    </section>
+{% endblock %} 

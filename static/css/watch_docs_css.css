@@ -1,0 +1,51 @@
+section h1{
+    text-align: center;
+}
+
+section p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+section div{
+    border: solid gray 1px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container{
+    display: inline-block;
+}
+
+.float-right{
+    float: right;
+    margin: 5px 5px;
+}
+
+section div button{
+    background-color: green; 
+    border-radius: 5px;
+}
+
+section div textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    width: 94%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+section div span{
+    color: white;
+}
+
+.h_sort{display : inline-block;}
+    
+section div div {
+    border : none;
+    margin-left: 5px;
+    margin-top: 5px
+
+}

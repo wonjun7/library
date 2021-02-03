@@ -1,0 +1,250 @@
+body {margin: 0;}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 18px;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.sidenav li a.active {
+  background-color:#404040;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+#del{
+  padding: 11px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 2px 2px 8px;
+}
+
+#book_n{
+  padding: 11px;
+  padding-right: 172px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 2px 2px 8px;
+  margin: 5px;
+}
+
+#book_e{
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 8px;
+  margin: 5px;
+  width: 341px;
+  height: 199px;
+}
+
+select, #book_C{
+  width: 200px; /* 원하는 너비설정 */
+  padding: .8em .5em; /* 여백으로 높이 설정 */
+  font-family: inherit; /* 폰트 상속 */
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+  border: 1px solid #999;
+  border-radius: 15px; /* iOS 둥근모서리 제거 */
+  box-shadow: 2px 2px 8px;
+  font-size: 14px;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+}
+
+#btn {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: lightslategray;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+#btn:hover {
+  background-color: darkgray;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
+.filebox{
+  padding-top: 21px;
+  height: 3px;
+  width: 175px;
+}
+.filebox label {
+  border: 0;
+  line-height: 2.5;
+  padding: 10px 38px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: lightslategray;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.filebox label:hover {
+  background-color: darkgray;
+}
+
+.filebox label:active {
+  background-color: darkgray;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.clearfix{
+  margin-top: 20px;
+}
+.submit_book_insert{
+  padding-bottom: 40px;
+}
+.book_name, .book_catagory, .book_label{
+  font-family: "Arial Black", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px gray;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  flex-direction: column;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.container {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 48px;
+  border: 1px solid #888;
+  width: 360px;
+}
+
+.container_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.book_text {
+  width: 500px;
+  height: 660px;
+  overflow: visible;
+}
+
+.book_image {
+  width:500px; 
+  height:660px;
+}
+
+.cancelbtn_detail {
+  width:1000px;
+  height:30px;
+}
+
+.submit_book_insert, cancelbtn_book_insert {
+  width:124px;
+  height:40px;
+}
+
+@media(max-width:1300px) {
+  .book_text {
+      width:250px;
+      height:330px;
+  }
+  .book_image {
+      width:250px;
+      height:330px;
+  }
+  .cancelbtn_detail {
+      width:200px;
+  }
+}

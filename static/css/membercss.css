@@ -1,0 +1,83 @@
+/* 회원정보수정(member) CSS */
+
+li {
+    padding:5px;
+}
+
+.bigbox {
+    width: 450px;
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
+section {
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    position: relative;
+    top: 70px;
+}
+article {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top:40px;
+    left:10px;
+}
+
+input:not(.box3) {
+    text-align: center;
+    height: 25px;
+}
+select {
+    height: 25px;
+}
+
+.title {
+    margin:0 auto;
+}
+.signup{
+    text-align: center;
+}
+.box1, .box2 {
+    margin: 0 auto;
+    text-decoration: none;
+    list-style-type: none;
+    padding:10px 20px 10px 20px;
+    font-weight: bold ;
+    width: 300px;
+    margin-left: 60px;
+}
+.input_box {
+    text-align: left;
+    font-weight:bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.box3 {
+    clear: both;
+    position: relative;
+    left: 90px;
+    top: 20px;
+}
+#confirm, #canceal {
+    float: left;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    vertical-align: bottom;
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;    
+}
+#confirm {
+    background-color: lightblue;
+}
+#canceal {
+    background-color: lightgray;
+}

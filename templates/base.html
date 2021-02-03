@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="stylesheet" href="../static/css/basic.css">
+</head>
+<body>
+    <header>
+        <div>
+          <a href="/">
+          <img src="../static/image/main/logo.png" id="logo" width="120px" alt="로고" ></a>
+        </div>
+    
+        <div id="top_menu">
+          {% if session["id"] and session["id"] == "master" %}
+          <a> {{ session["id"] }}님 환영합니다.</a>
+          <a>l</a>
+          <a href="/sign_out">LOGOUT</a>
+          <a>l</a>
+          <a href="/member_info">회원정보수정</a>
+          <a>l</a>
+          <a href="/master/master">MASTER PAGE</a>
+          {% elif session["id"] %}
+          <a> {{ session["id"] }}님 환영합니다.</a>
+          <a>l</a>
+          <a href="/sign_out">LOGOUT</a>
+          <a>l</a>
+          <a href="/member_info">회원정보수정</a>
+          {% else %}
+          <a href="/sign_in">LOGIN</a>
+          <a>l</a>
+          <a href="/sign_up">JOIN US</a>
+          {% endif %}
+        </div>
+    
+        <nav id="navbar">
+          <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a>l</a></li>
+            <li><a href="/intro">Intro</a></li>
+            <li><a>l</a></li>
+            <li><a href="/community/board_home">Community</a></li>
+            <li><a>l</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a>l</a></li>
+            <li><a href="/game">Game</a></li>
+          </ul>
+        </nav>
+      </header>
+    <br><br><br>
+
+    {% block section %}
+    {% endblock %}
+    
+    <footer>
+        <p>서울시 관악구 보라매동 ㅣ TEL:010-0000-0000 ㅣ FAX:000-1234-5678 ㅣ E-mail:yunsell31@gmail.com</p>
+        <p>Copyright Volunteer. All rights reserved.</p>
+      </footer>
+</body>
+</html>

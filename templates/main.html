@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="../static/css/main.css">
+{% extends "base.html" %}
+{% block section %}
+{{ content | safe }}
+<!--        수정하려는 게시글의 제목과 내용이 회원이 이전에 작성했던 것과 동일한 경우와
+            같은 게시글에 이미 동일한 내용의 댓글을 달았을 경우 오류 처리.(이재형)-->
+{{alert|safe}}
+    <section>
+      <a href="/books">
+      <img src="../static/image/main/b1.png" id=mainImage width="600px" alt="Books"></a>
+    
+      <script>
+          var myImage=document.getElementById("mainImage");
+          var imageArray=["../static/image/main/b1.png", "../static/image/main/b2.png", "../static/image/main/b3.jpeg"];
+          var imageIndex=0;
+
+          function changeImage(){
+                  myImage.setAttribute("src", imageArray[imageIndex]);
+                  imageIndex++;
+                  if(imageIndex>=imageArray.length){
+                          imageIndex=0;
+                  }
+          }
+          setInterval(changeImage,2000);
+      </script>
+
+      <h2>Books</h2>
+      <p>● ● ●</p>
+      <p><br><b>신일석 선생님</b>의<br> 다양한 언어 책들이 있습니다.</p>
+    </section>
+
+
+    <aside>
+      <a href="/community/board_home">
+      <img src="../static/image/main/c1.png" id=mainImage2 width="600px" alt="Community"></a>  
+
+      <script>
+        var myImage2=document.getElementById("mainImage2");
+        var imageArray2=["../static/image/main/c1.png", "../static/image/main/c2.png", "../static/image/main/c3.png"];
+        var imageIndex2=0;
+
+        function changeImage(){
+                myImage2.setAttribute("src", imageArray2[imageIndex2]);
+                imageIndex2++;
+                if(imageIndex2>=imageArray2.length){
+                        imageIndex2=0;
+                }
+        }
+        setInterval(changeImage,2000);
+      </script>
+
+      <h2>Community</h2>
+      <p>● ● ●</p>
+      <p><br><b>자바 활용 SW 응용 개발자과정</b> 학생들의<br> 다양한 이야기와 정보를 공유하는 곳입니다.</p>
+    </aside>   
+    
+    <div class="slide">
+        <ul>
+          <li><a href="#"><img src="/static/image/main/C언어.PNG" alt=""></a></li>
+          <li><a href="#"><img src="/static/image/main/html.png" alt=""></a></li>
+          <li><a href="#"><img src="/static/image/main/자바.PNG" alt=""></a></li>
+          <li><a href="#"><img src="/static/image/main/파이썬.PNG" alt=""></a></li>
+        </ul>
+      </div> 
+{% endblock %}
+

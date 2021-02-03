@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .h_sort{
+        display : inline-block;
+      }
+    </style>
+</head>
+<body>
+  <h3>{0}</h3>
+  <div class="container">
+      <p>{1}</p>
+      <!-- <div>
+          <a class="h_sort" href ="{2}" download><input type="button" value="첨부파일 다운로드"></a>
+          <p class="h_sort">{7}</p>
+      </div>                                  -->
+      <input class="float-right" type="button" value="삭제" onclick="javascript : delete_check_btn()">
+      <input class="float-right" type="button" value="수정" onclick="location.href='/community/amend_doc?p_number={6}'">
+      <button class="float-right" disabled><span style="color: white;">작성자 : {3} 작성일시 : {4} 최종 수정 : {5}</span></button>    
+  </div>
+  <script>
+      function delete_check_btn(){{
+        if(confirm("정말 삭제하시겠습니까?")==true){{
+          window.location = '/community/delete_doc?p_number={6}';
+        }} else{{
+          return false;
+        }}
+     }}
+  </script>
+</body>
+</html>

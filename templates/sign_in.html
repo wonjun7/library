@@ -1,0 +1,36 @@
+<!--로그인 화면-->
+<link rel="stylesheet" href="../static/css/signincss.css?after">
+{% extends "base.html" %}
+{% block section %}
+
+<!--로그인 실패시 alert창 뜨도록 함.-->
+{{ content | safe }}
+<!-- 로그인 하지 않은 상태에서 글 혹은 댓글 작성 버튼 클릭하면 넘어오는 alert 메세지 창.(이재형)-->
+{{ alert | safe}}
+    <section>
+        <div class="bigbox">
+            <form action="/sign_in" method="post">
+            <div class="title">
+                <h1 class="signup">로그인</h1>
+            </div>
+            <div>
+                <ul class="box1">
+                    <li><label> <input type="text" name="id" style="float:right" class="input_box"placeholder="아이디" autofocus required></label></li>
+                    <li><label> &nbsp;<input type="password" name="pw" style="float:right;" class="input_box" placeholder="비밀번호" autofocus required></label></li>
+                </ul>
+                <div>
+                <p class="box2">■ 회원가입을 하지 않으신 경우 &nbsp;</p>  
+                <input type="button" id="signup1" value="회원가입하기" onclick="location.href='/sign_up'">
+                </div>
+            </div>
+            <div class="box3">
+                <div><input type="submit" class="signin2" value="로그인"></div>
+                <div><input type="button" class="canceal" value="취소" onclick="location.href='/main'"></div>
+            </div>
+            </form>
+        </div>
+    </section>
+<script>
+
+</script>
+{% endblock %}

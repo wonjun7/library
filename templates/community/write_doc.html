@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../../static/css/write_doc_css.css">
+<link rel="stylesheet" href="../static/css/basic.css">
+{% extends "base.html" %}
+{% block section %}
+
+    <section>
+      <h1>글 작성</h1>
+        <hr>
+        <input class="input" type="button" value="목록으로" onclick="location.href='/community/board_home'">
+        <br>
+        <p>작성자 : {{author | safe}}</p>
+        <form action="/community/watch_doc" method="POST" enctype="multipart/form-data">
+          <div>
+            <p>제목 : </p>
+            <input type="text" name="title">
+          </div>
+          <br>
+          <textarea rows="30" name="contents"></textarea>
+          <br>
+          <div class="div">
+            <p>파일첨부 :</p><input type="file" name="post_file">
+            <input class="input" type="submit" value="등록" onclick="">
+          </div>
+        </form>
+    </section>
+{% endblock %}

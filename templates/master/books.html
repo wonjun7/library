@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../static/css/master.css">
+<link rel="stylesheet" href="../../static/css/tmaster.css">
+<link rel="stylesheet" href="../static/css/book_upload.css">
+<script src="/static/js/master.js"></script>
+<title>Master Page - Books</title>
+<style>
+  #exa{
+    position:absolute;
+  }
+  @media screen and (max-width: 750px)
+{ #exa { position: static;}
+} 
+</style>
+</head>
+<body>
+
+<ul class="sidenav">
+  <li><a class="active" href="#관리자 페이지">관리자 페이지</a></li>
+  <li><a href="/main">홈</a></li>
+  <li><a href="/master/master">회원</a></li>
+  <li><a href="/master/community">게시글</a></li>
+  <li><a href="/master/books">도서</a></li>
+  <li><a href="/master/report">대출기록</a></li>
+</ul>
+
+<div class="content">
+  <h1 id="title2">도서</h1><img src="../../static/image/master/member.jpeg" id="member">
+<header style=margin-bottom:26px;>
+<p>도서 목록 및 대여 여부 확인하는 곳입니다.</p>
+
+<form action="/master/books" method="GET" name="check">
+<input type="text" id="del" name="delete" placeholder="삭제할 책 번호 입력..">
+<input type="button" id="btn" value="삭제하기" style="margin-left:10px" onclick="button_event()">
+<input type="button" id="btn" value="책등록" style="margin-left:10px" onclick="book_insert()">
+</form>
+
+</header>
+
+<section>
+  <div id="modal_book_insert" class="modal">
+    <form action="/master/books" method="post" enctype="multipart/form-data">
+      <div class="container">
+        <span onclick="document.getElementById('modal_book_insert').style.display='none'" class="close" title="Close Moda2">×</span>
+        <h1 class="book_name">책 등록</h1>
+
+          <input type="text" id="book_n" name="book_name" placeholder="책 이름을 넣어주세요.."><br><br>
+          <label for="book_e" class="book_label">책 설명</label><br><br>
+          <textarea rows="30" id="book_e" name="book_contents"></textarea>
+          <h2 class="book_catagory">책 카테고리</h2>            
+
+            <select id="book_c" name="book_catagory">
+              {{ catagory_tag | safe }}
+            </select>
+
+            <div class="filebox">
+              <label for="ex_file">업로드</label>
+              <input type="file" id="ex_file" name="book_file">
+            </div>
+            
+        <br>
+
+        <div class="clearfix">
+          <button type="submit" id="btn" class="submit_book_insert">등록</button>
+          <button type="button" id="btn" onclick="document.getElementById('modal_book_insert').style.display='none'" class="cancelbtn_book_insert">취소</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+{{ content | safe }}
+
+
+
+</section>
+
+</body>
+</html>

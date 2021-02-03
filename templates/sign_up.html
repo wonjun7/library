@@ -1,0 +1,57 @@
+<!--회원가입 화면-->
+<link rel="stylesheet" href="../static/css/signupcss.css?after">
+<script type="text/javascript" src="../static/js/sign_up.js"></script>
+{% extends "base.html" %}
+{% block section %}
+    <div class="bigbox">
+        <section>
+            <div class="title">
+                <h1 class="signup">회원가입</h1>
+            </div>
+        </section>
+        <article>
+            <form action="/sign_up" name="f1" method="post">
+            <div>
+                <ul class="box1">
+                    <div class="id_box">
+                        <li>아이디 &nbsp; <input type="text" name="id" id="id" style="float:right;" autofocus required></li>
+                        <li><input type="button" id="id_ck" value="ID 중복확인" onclick="id_double_check()"></li>
+                    </div>
+
+    <!--                비밀번호와 비밀번호 확인의 동일성 여부 판단 기능은 아직 없음-->
+                    <li>비밀번호 &nbsp; <input type="password" name="pw" style="float:right;" required></li>
+                    <li>비밀번호 확인 &nbsp;&nbsp; <input type="password"name="pw2" style="float:right , margin-left 20px"; required ></li>
+                </ul>
+            </div>
+
+            <div>   
+                <ul class="box2">
+                    <li>이름 &nbsp; <input type="text" name="name" style="float:right;"  required></li>
+                    <li>성별 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div id="gender">
+                        <label><input type="radio" name="gender" value="남">남</label>
+                        <label><input type="radio" name="gender" value="여">여</label>
+                        </div>
+                    </li>
+                    <tr>
+    <!--                생년월일 기본값으로 2020년 01월 01일 지정-->
+                        <th>생년월일 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+                        <td>
+                            <input type="date" name="birthday" value="2020-01-01" style="width:175px;" class="inBorder" />
+                        </td>
+                    </tr>
+    <!--                연락처와 이메일은 placeholder로 입력형식 예시를 나타내었으나 형식 일치여부 판단 기능은 아직 없음-->
+                    <li>연락처 &nbsp; <input type="text" name="phone" style="float:right;" placeholder="010-0000-0000" required></li>
+                    <li>이메일 &nbsp; <input type="text" name="email" style="float:right;" placeholder="aaa@aaa.aaa" required></li>
+                </ul>
+            </div>
+
+            <div class="box3">
+                <input type="submit" id="signup2" value="회원가입">
+                <input type="button" id="canceal" value="취소" onclick="location.href='/'">
+            </div>
+            </form>
+        </article>
+    </div>
+
+{% endblock %}

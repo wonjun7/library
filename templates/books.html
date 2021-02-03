@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="../static/css/books.css">
+<script type="text/javascript" src="../static/js/books.js"></script>
+{% extends "base.html" %}
+{% block section %}
+      <section class="main">
+        <aside>
+          <ul class="aside__menu">
+            {{ tag | safe }}
+          </ul>
+        </aside>
+        <section class="books">
+          <section class="books__menu">
+            {{ content | safe }}
+          </section>
+          <section class="book__search">
+            <form action="/books" method="get">
+              <div>
+                <select name="search">
+                  <option value="">제목</option>
+                </select>
+                <input type="text" name="title">
+                <button type="submit">검색</button>
+              </div>
+            </form>
+          </section>
+        </section>
+      </section>
+      
+      <div id="modal_detail" class="modal">
+        <div class="container">
+          <span onclick="document.getElementById('modal_detail').style.display='none'" class="close" title="Close Modal">×</span>
+          <h1 class="book_name">모두의 C언어</h1>
+          <div class="container_image">
+            <input type="image" class="book_image" alt="책" onclick="document.getElementById('modal_detail').style.display='block'">
+            <textarea class="book_text" readonly="readonly"></textarea> 
+            </div> 
+            <br>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('modal_detail').style.display='none'" class="cancelbtn_detail">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

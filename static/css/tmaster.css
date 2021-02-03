@@ -1,0 +1,36 @@
+table {
+    width:100%;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+  #t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  #t01 tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  #t01 th {
+    background-color: #404040;
+    color: white;
+  }
+
+  #member {
+    width: 250px;
+    float: right;
+    margin-right: 50px;
+  }
+
+  #member:hover {
+    transform:scale(0.8);
+    transition: transform.5s;
+  }
+
+  @media screen and (max-width: 550px) {
+    #member {width: 150px;}
+  }
